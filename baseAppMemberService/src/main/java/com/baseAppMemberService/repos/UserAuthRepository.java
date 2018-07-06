@@ -1,8 +1,8 @@
-package com.BaseApp.services.repos;
+package com.baseAppMemberService.repos;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-import com.BaseApp.services.entities.UserAuth;
+import com.baseAppMemberService.entities.UserAuth;
 
 public interface UserAuthRepository extends PagingAndSortingRepository<UserAuth, Long> {
 

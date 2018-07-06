@@ -1,4 +1,4 @@
-package com.BaseApp.services.entities;
+package com.baseAppMemberService.entities;
 
 import java.util.Date;
 
