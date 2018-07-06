@@ -11,6 +11,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import io.swagger.annotations.ApiModel;
+
+@ApiModel(description="All details about the user.")
 @Entity
 @Table(name = "user")
 public class User extends AbstractEntity {
