@@ -16,12 +16,12 @@ import io.swagger.annotations.ApiModel;
 @ApiModel(description="All details about the user.")
 @Entity
 @Table(name = "user")
-public class User extends AbstractEntity {
+public class User extends AbstractEntity implements Identifiable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "userid")
-	private long id;
+	private Long id;
 	private String prefix;
 	private String firstname;
 	private String middlename;
@@ -33,11 +33,13 @@ public class User extends AbstractEntity {
 	@OneToMany(mappedBy = "user")
 	private Set<Useraddress> addresses;
 
-	public long getId() {
+	@Override
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	@Override
+	public void setId(Long id) {
 		this.id = id;
 	}
 
